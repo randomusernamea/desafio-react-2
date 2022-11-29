@@ -5,13 +5,15 @@ import { v4 as uuidv4 } from "uuid";
 
 function Agregar(props){
     const [texto, setTexto] = useState('');
-    const [classTarea, setClassTarea] = useState('prioridad-baja');
+    const [classTarea, setClassTarea] = useState('prioridad-baja'); //Defaults to 'prioridad-baja'
     const onChangeTexto = (e) => {
         setTexto(e.target.value);
     }
     const onClickButton = (e) =>{
         e.preventDefault();
         props.agregarFunction({text: texto, clase: classTarea, key: uuidv4()
+            //uuidv4 gives each element a unique key to differentiate between them in case the exact same task
+            //is added twice
         })
     }
     const onChangeSelect = (e) =>{

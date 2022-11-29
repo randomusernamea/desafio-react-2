@@ -13,8 +13,8 @@ function Main(){
         setTareas([...tareas, tarea]);
     }
     function borrarTarea(e){
-        console.log(e)
-
+        //Returns all elements with a different key, since hopefully they are unique
+        //this will return the same list, except with 1 element.
         let listaNueva = tareas.filter((tarea)=>{
             return tarea.key !== e;
         })
@@ -29,7 +29,6 @@ function Main(){
             <Agregar agregarFunction={agregarTarea}/>
             <h3>Tareas</h3>
             <Lista borrarFunction={borrarTarea} tareas={tareas}/>
-            
             <p className="tips">Tip: Pueden borrar tareas clickeando en ellas</p>
         </main>
     );
