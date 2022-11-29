@@ -5,8 +5,7 @@ import {useState} from 'react';
 
 function Main(){
     const [tareas, setTareas] = useState([]);
-    const [indexes, setIndexes] = useState([]);
-    const [clases, setClases] = useState([]);
+
     
 
     function agregarTarea(tarea){

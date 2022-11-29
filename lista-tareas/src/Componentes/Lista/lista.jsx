@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function Lista(props){
     //Returns a p tag if the list is empty, indicating that the list is empty, else it returns the list items
     //using the list elements
