@@ -1,4 +1,4 @@
-function Lista(props){
+function ListaComp(props){
     //Returns a p tag if the list is empty, indicating that the list is empty, else it returns the list items
     //using the list elements
     if (props.tareas.length===0){
@@ -12,10 +12,9 @@ function Lista(props){
                 props.tareas.map((tarea, index)=>{
                     return(
                         <>
-                            <li className={tarea.clase} onClick={() => props.borrarFunction(tarea.key)} key={tarea.key}>
+                            <li className={tarea.clase} key={tarea.key}>
                                 {tarea.text} {tarea.fechaLimite}
                             </li>
-                            <button onClick={() => props.completarTarea(tarea)}>Completar</button>
                         </>
                     )
                 })
@@ -27,4 +26,4 @@ function Lista(props){
 }
 
 
-export default Lista
+export default ListaComp
